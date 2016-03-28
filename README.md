@@ -1,6 +1,6 @@
 # Casper-Comments
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
+The default theme (extend for comments) for [Ghost](http://github.com/tryghost/ghost/).
 
 To download, visit the [releases](https://github.com/origin1tech/casper-comments/releases) page.
 
