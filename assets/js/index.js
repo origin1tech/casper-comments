@@ -4,10 +4,6 @@
 
 /* globals jQuery, document */
 (function ($, undefined) {
-<<<<<<< HEAD
-
-=======
->>>>>>> c1a3840cbe50e6594d80e5e5d4c2a0b8c132f36d
     "use strict";
 
     var $document = $(document);
@@ -57,8 +53,4 @@
         });
 
     };
-<<<<<<< HEAD
-
-=======
->>>>>>> c1a3840cbe50e6594d80e5e5d4c2a0b8c132f36d
 })(jQuery);
