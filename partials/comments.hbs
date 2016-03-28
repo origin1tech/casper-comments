@@ -1,0 +1,119 @@
+<!--
+  AUTHOR: Origin1 Technologies <origin1tech@gmail.com>
+  LICENSE: MIT
+  DESCRIPTION:
+  This is a simple partial template used
+  for the purpose of easily adding comments
+  using Disqus to your Ghost blog.
+-->
+
+<style>
+
+  /* Comments styling not necessarily required
+   * just ensures that there's no flicker etc
+   * if/when the element is removed.
+   */
+  body .comments { display: none; }
+  body.tag-comments .comments { display: block; }
+
+  /* A little styling when no JavaScript is detected */
+  .noscript {
+    padding: 8px 16px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #fcf5d5;
+    font-size: .8em;
+    border: 1px solid #ebe3be;
+    color: #775F00;
+  }
+
+</style>
+
+<div id="disqus_thread" class="comments"></div>
+
+<script>
+
+  // Get the disqus name;
+  var DISQUS_NAME = window.DISQUS_NAME,
+      DISQUS_CONFIG = window.DISQUS_CONFIG,
+      disqus_config;
+
+  var body = document.querySelector('body'),
+      threadElem = document.getElementById('disqus_thread'),
+      classList = body.classList,
+      hasComments = classList.contains('tag-comments');
+
+
+  // If no comments remove disqus element.
+  // Hiding is not enough as a savvy user
+  // could disable the css.
+  if (!hasComments) {
+    threadElem.parentNode.removeChild(threadElem);
+  }
+
+  else {
+
+    /**
+    * RECOMMENDED CONFIGURATION VARIABLES:
+    * EDIT AND UNCOMMENT THE SECTION BELOW TO
+    * INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:
+    *
+    *  https://disqus.com/admin/universalcode/#configuration-variables
+    */
+
+    // Uncomment below or define as window.DISQUS_CONFIG
+    // in the "code injection" head of your blog settings
+    // area. If a window variable is defined it will be
+    // used over the local below.
+
+    // disqus_config = function () {
+    //
+    //  // Change to page url.
+    //  this.page.url = PAGE_URL;
+    //
+    //  // Change to unique identifier to
+    //  // further prevent split posts.
+    //  this.page.identifier = PAGE_IDENTIFIER; // Change to unique identifier.
+    //
+    // };
+
+    // Check if disqus config was defined in
+    // the Ghost code injection section.
+    // When no config is defined Disqus will isolate
+    // posts using the url.
+    disqus_config = DISQUS_CONFIG || disqus_config;
+
+    (function() {
+
+      var d = document,
+          thread = d.createElement('script'),
+          count = d.createElement('script');
+
+      // Create thread.
+      thread.src = '//' + DISQUS_NAME + '.disqus.com/embed.js';
+      thread.setAttribute('data-timestamp', +new Date());
+
+      // Create count
+      count.src = '//' + DISQUS_NAME + '.disqus.com/count.js';
+      count.setAttribute('id', 'dsq-count-scr');
+      count.setAttribute('async', '');
+
+      // Append thread to head.
+      (d.head || d.body).appendChild(thread);
+
+      // Append count to head.
+      (d.head || d.body).appendChild(count);
+
+    })();
+
+  }
+
+</script>
+
+<noscript>
+  <p class="noscript">
+    To view comments please enable JavaScript...<a href="https://disqus.com/?ref_noscript" rel="nofollow">powered by Disqus.</a>
+  </p>
+</noscript>
