@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> c1a3840cbe50e6594d80e5e5d4c2a0b8c132f36d
 /* ==========================================================================
    Table of Contents
    ========================================================================== */
@@ -26,7 +29,11 @@
    0. normalize.css v3.0.3 | MIT License | git.io/normalize | (minified)
    ========================================================================== */
 
+<<<<<<< HEAD
 html {
+=======
+html { 
+>>>>>>> c1a3840cbe50e6594d80e5e5d4c2a0b8c132f36d
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
@@ -72,7 +79,11 @@ button, input, optgroup, select, textarea {
 }
 button { overflow: visible; }
 button, select { text-transform: none; }
+<<<<<<< HEAD
 button, html input[type="button"],
+=======
+button, html input[type="button"], 
+>>>>>>> c1a3840cbe50e6594d80e5e5d4c2a0b8c132f36d
 input[type="reset"], input[type="submit"] {
     -webkit-appearance: button;
     cursor: pointer;
